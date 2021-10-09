@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bleu_balais2.ico" />
+    <None Remove="bleu_balais2.png" />
+    <None Remove="bleu_hist2.png" />
+    <None Remove="bleu_maj2.png" />
+    <None Remove="bleu_web2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="bleu_balais2.ico" />
+    <Resource Include="bleu_balais2.png" />
+    <Resource Include="bleu_hist2.png" />
+    <Resource Include="bleu_maj2.png" />
+    <Resource Include="bleu_web2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.0-rc.1.21452.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0-rc.1.21452.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LogicielNettoyagePC.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

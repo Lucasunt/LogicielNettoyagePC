@@ -1,0 +1,44 @@
+﻿<Window x:Class="LogicielNettoyagePC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogicielNettoyagePC"
+        mc:Ignorable="d"
+        x:Name="mWindow"
+        Title="Logiciel de nettoyage PC" Height="700" Width="930" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="175" Margin="0,-1,0,0" Stroke="#FF007791" VerticalAlignment="Top" Width="1000" Fill="#FF006080"/>
+        <!--***Header-->
+        <!--Titre-->
+        <Label x:Name="lblTitle" Content="Analyse du PC nécessaire" HorizontalAlignment="Left" Margin="31,23,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="40" FontWeight="Bold"/>
+        <!--Sous-titres-->
+        <Button x:Name="btLangDE" Content="DE" HorizontalAlignment="Left" Margin="834,8,0,0" VerticalAlignment="Top" Height="25" Width="25" Background="#FF006080" BorderThickness="1" BorderBrush="White" Foreground="White" FontFamily="Arial" FontSize="12" Click="BtLangDE_Click"/>
+        <Button x:Name="btLangFR" Content="FR" HorizontalAlignment="Left" Margin="863,8,0,0" VerticalAlignment="Top" Height="25" Width="25" Background="#FF006080" BorderThickness="1" BorderBrush="White" Foreground="White" FontFamily="Arial" FontSize="12" Click="BtLangFR_Click"/>
+        <Label x:Name="lblSpaceToClean" Content="Espace à nettoyer: " HorizontalAlignment="Left" Margin="30,79,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="lblLastScan" Content="Dernière analyse: " HorizontalAlignment="Left" Margin="31,114,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
+        <!--Valeurs-->
+        <Label x:Name="lblLastScanValue" Content="??? " HorizontalAlignment="Left" Margin="248,114,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22"/>
+        <Label x:Name="lblSpace" Content="??? Mb " HorizontalAlignment="Left" Margin="248,79,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Normal"/>
+        <Button Name="btScan" Content="Analyser" HorizontalAlignment="Left" Margin="588,44,0,0" VerticalAlignment="Top" Height="105" Width="300" Background="#FF006080" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="White" FontFamily="Arial" FontWeight="Bold" FontSize="30" Click="BtScan_Click"/>
+        <Rectangle HorizontalAlignment="Center" Height="15" Stroke="#FFF9F9F9" VerticalAlignment="Top" Width="1000" Fill="#FFF0F0F0" Margin="0,174,0,0"/>
+
+        <!--***Footer-->
+        <!--Copyright-->
+        <Rectangle HorizontalAlignment="Center" Height="90" Stroke="#FFF9F9F9" VerticalAlignment="Top" Width="1000" Fill="#FFF0F0F0" Margin="0,594,0,0"/>
+        <Label Content="Copyright 2021 - Lucas " HorizontalAlignment="Left" Margin="369,600,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Arial" FontSize="20" RenderTransformOrigin="0.241,0.456"/>
+        <!--Msg-->
+        <Rectangle Visibility="Hidden" x:Name="rtBanner" HorizontalAlignment="Center" Height="42" Stroke="#FFF9F9F9" VerticalAlignment="Top" Width="1000" Fill="#FFD77373" Margin="0,635,0,0"/>
+        <Label Visibility="Hidden" x:Name="lblNews" Content="Actu" HorizontalAlignment="Left" Margin="30,637,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Arial" FontSize="18" RenderTransformOrigin="0.241,0.456" Width="945" Height="31" />
+        <Button x:Name="btClean" Content="&#xD;&#xA;&#xD;&#xA;Nettoyer" HorizontalAlignment="Left" Margin="27,209,0,0" VerticalAlignment="Top" Height="180" Width="430" Background="#FF006080" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="White" FontFamily="Arial" FontWeight="Bold" FontSize="30" Click="BtClean_Click"/>
+
+        <Button x:Name="btUpdates" Content="&#xD;&#xA;&#xD;&#xA;Mise à jour" HorizontalAlignment="Left" Margin="27,396,0,0" VerticalAlignment="Top" Height="180" Width="430" Background="#FF006080" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="White" FontFamily="Arial" FontWeight="Bold" FontSize="30" Click="BtUpdates_Click"/>
+        <Button x:Name="btHistory" Content="&#xD;&#xA;&#xD;&#xA;Historique" HorizontalAlignment="Left" Margin="464,209,0,0" VerticalAlignment="Top" Height="180" Width="430" Background="#FF006080" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="White" FontFamily="Arial" FontWeight="Bold" FontSize="30" Click="BtHistory_Click"/>
+        <Button x:Name="btWebsite" Content="&#xD;&#xA;&#xD;&#xA;Site web" HorizontalAlignment="Left" Margin="464,396,0,0" VerticalAlignment="Top" Height="180" Width="430" Background="#FF006080" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="White" FontFamily="Arial" FontWeight="Bold" FontSize="30" Click="BtWebsite_Click"/>
+        <Image Height="65" Width="65" Margin="200,234,630,350" Source="bleu_balais2.png" IsHitTestVisible="False"/>
+        <Image Height="65" Width="65" Margin="630,234,200,350" Source="bleu_hist2.png" IsHitTestVisible="False"/>
+        <Image Height="65" Width="65" Margin="195,419,635,165" Source="bleu_maj2.png" IsHitTestVisible="False"/>
+        <Image Height="65" Width="65" Margin="630,419,200,165" Source="bleu_web2.png" IsHitTestVisible="False"/>
+
+    </Grid>
+</Window>
